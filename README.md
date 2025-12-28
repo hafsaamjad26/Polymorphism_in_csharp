@@ -1,53 +1,54 @@
 # Polymorphism_in_csharp
 
-**Introduction To Polymorphism
+## Introduction To Polymorphism
 
-Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance.
+Polymorphism means **"many forms"**, and it occurs when we have many classes that are related to each other by inheritance.
 
-Polymorphism is one of the four fundamental pillars of Object-Oriented Programming.In C#, polymorphism allows the same method to behave differently based on the object that is calling it.
+Polymorphism is one of the four fundamental pillars of Object-Oriented Programming. In C#, polymorphism allows the same method to behave differently based on the object that is calling it.
 
 This repository demonstrates polymorphism in C# using clear theory and practical code examples.
 
-**Types of Polymorphism
+## Types of Polymorphism
 
 There are two types of polymorphism
 
-****1-Static Polymorphism(Complie Time Polymorphism)****
+### 1. Static Polymorphism(Compile-Time Polymorphism)
 
-Static polymorphism is achieved using method overloading. In this type, multiple methods share the same name and data type (method signature) but differ in parameters.
+Static polymorphism is achieved using **method overloading**.
+In this type, multiple methods share the same name and data type (method signature) but differ in parameters.
 They may differ in:
 
-**number of parameters.
+- number of parameters
 
-**sequence of parameters.
+- sequence of parameters
 
-**data type of parameters.
+- data type of parameters
 
-The decision about which method to call is made at compile time.
+The decision about which method to call is made at **compile-time**.
 
-****2-Dynamic Polymorphism(Run Time Polymorphism)****
+### 2. Dynamic Polymorphism(Run-Time Polymorphism)
 
-Dynamic polymorphism is achieved using method overriding.
+Dynamic polymorphism is achieved using **method overriding**.
 In run-time polymorphism a base class reference can be used to point to an object of any of its derived classes
 It requires:
 
-**Inheritance
+- Inheritance
 
-**The virtual keyword in the base class.
+- The virtual keyword in the base class
 
-**The override keyword in the derived class.
+- The override keyword in the derived class
 
 The method call is resolved at runtime based on the object type.
 The method in the base class must be declared with the *virtual* modifier, indicating that it can be overridden by a derived class.
 The method in the derived class must use the *override* modifier to provide a specific implementation for the virtual method inherited from the base class.
-
-##--Benefits of Polymorphism--##
+---
+## Benefits of Polymorphism
 - Improves code flexibility
 - Reduces duplication
 - Makes applications scalable
 - Widely used in real-world software projects
 
-##-Explanation of code examples  
+### Explanation of code examples  
 You can see Code Examples in this repository
 
 Example 1: Compile-Time Polymorphism
@@ -68,7 +69,9 @@ The BankAccount class defines a virtual method CalculateInterest().
 SavingsAccount and CurrentAccount override this method to provide
 different interest calculations.
 
-**-Conclusion
+---
+
+## Conclusion
 
 Polymorphism allows developers to write flexible and reusable code.
 By using polymorphism, applications become easier to extend and maintain. 
