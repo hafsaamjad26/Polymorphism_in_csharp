@@ -1,52 +1,53 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Example1_StaticPolymorphism
+namespace Example_2_DynamicPolymorphism
 {
-    class Calculator
+    //Dynamin-Polymorphism(Run-time Polymorphism)
+    //Base Class
+    class Shapes
     {
-        //Polymorphism
-        //Static Polymorphism(Compile-time polymorphism)
-        //method-overloading
-        public int Add(int a,int b)
+        //we declare base method virtul to allow over-riding in derived classes
+        public virtual void Draw()
         {
-            return a + b;
-        }
-        //over-loading allows working with different number of parameters
-        public int Add(int a, int b,int c)
-        {
-            return a + b + c;
-        }
-        //over-loading allows working with different data types of parameters
-        public double Add(double a, double b)
-        {
-            return a + b;
-        }
-        public double Add(float a, double b)
-        {
-            return a + b;
-        }
-        //over-loading allows working with different sequence of parameters
-
-        public double Add(double a, float b)
-        {
-            return a + b;
+            Console.WriteLine("Shapes are drawn");
         }
     }
+    //Derived classes
+    //inheritance in necessary for over riding 
+    class Circle : Shapes
+    {
+     //over ride keyword is used to over ride derived class method
+        public override void Draw()
+        {
+            Console.WriteLine("Circle is drawn");
+        }
+
+    }
+    class Rectangle : Shapes
+    {
+        public override void Draw()
+        {
+            Console.WriteLine("Rectangle is drawn");
+        }
+
+    }
+
     internal class Program
     {
         static void Main(string[] args)
         {
-            Calculator c1 = new Calculator();
-            Console.WriteLine(c1.Add(45,67));
-            Console.WriteLine(c1.Add(26,76,24));
-            Console.WriteLine(c1.Add(45.5, 54.8));
-            Console.WriteLine(c1.Add(2.7F, 76.34));
-            Console.WriteLine(c1.Add(45.456, 67.1F));
-            
+            Shapes s1 = new Shapes();
+            s1.Draw();
+            Shapes s2 = new Circle();
+            s2.Draw();
+            Shapes s3 = new Rectangle();
+            s3.Draw();
+
 
         }
     }
