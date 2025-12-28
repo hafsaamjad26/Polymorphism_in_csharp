@@ -39,8 +39,11 @@ It requires:
 - The override keyword in the derived class
 
 The method call is resolved at runtime based on the object type.
+
 The method in the base class must be declared with the *virtual* modifier, indicating that it can be overridden by a derived class.
+
 The method in the derived class must use the *override* modifier to provide a specific implementation for the virtual method inherited from the base class.
+
 ---
 ## Benefits of Polymorphism
 - Improves code flexibility
